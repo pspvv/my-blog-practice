@@ -1,0 +1,23 @@
+{
+  "name": "my-blog-practice",
+  "version": "1.0.0",
+  "description": "For setup instructions, see the [Installation Guide](../../wiki/Installation)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pspvv/my-blog-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pspvv/my-blog-practice/issues"
+  },
+  "homepage": "https://github.com/pspvv/my-blog-practice#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
