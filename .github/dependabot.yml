@@ -1,0 +1,6 @@
+version: 2
+updates:
+  - package-ecosystem: "pip" # or "npm", etc.
+    directory: "/"
+    schedule:
+      interval: "daily"
