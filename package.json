@@ -21,3 +21,16 @@
     "express": "^5.1.0"
   }
 }
+{
+  "name": "my-blog-practice",
+  "version": "1.0.0",
+  "description": "Practice MERN blog project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}
