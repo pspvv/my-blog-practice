@@ -1,6 +1,10 @@
 [project]
 name = "my-blog-practice"
+<<<<<<< HEAD
 version = "0.1.1"
+=======
+version = "0.1.0"
+>>>>>>> 1d17099b9a2265a8515cf8b4b3f391d53bd461ad
 description = "A simple Python library for demonstration"
 authors = [
     { name="pspvv", email="pspvvsandeep@gmail.com" }
@@ -12,4 +16,8 @@ dependencies = [
 
 [build-system]
 requires = ["setuptools>=61.0"]
+<<<<<<< HEAD
 build-backend = "setuptools.build_meta"
+=======
+build-backend = "setuptools.build_meta"
+>>>>>>> 1d17099b9a2265a8515cf8b4b3f391d53bd461ad
