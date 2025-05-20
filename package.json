@@ -34,3 +34,6 @@
   "license": "ISC",
   "dependencies": {}
 }
+"scripts": {
+  "test": "jest"
+}
