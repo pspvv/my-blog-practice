@@ -1,21 +1,35 @@
-name: CI Workflow
+name: Python CI # Or "Node.js CI" or any descriptive name
 
-on: [push, pull_request]
+on: [push, pull_request] # Triggers the workflow on push and pull_request events
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  test: # Defines a job named 'test'
+    runs-on: ubuntu-latest # Specifies the type of machine to run the job on (latest Ubuntu)
 
-    steps:
-      - uses: actions/checkout@v4
+    strategy: # Useful if you want to test against multiple versions
+      matrix:
+        python-version: [3.8, 3.9, 3.10, 3.11] # For Python projects
+        # node-version: [16.x, 18.x, 20.x] # Example for Node.js projects
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+    steps: # A sequence of tasks to be executed
+      - uses: actions/checkout@v4 # Checks out your repository's code so the workflow can access it
+
+      - name: Set up Python ${{ matrix.python-version }} # For Python
+        uses: actions/setup-python@v4
         with:
-          node-version: '20'
+          python-version: ${{ matrix.python-version }}
+      # - name: Set up Node.js ${{ matrix.node-version }} # For Node.js
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        run: npm install
+        run: | # Command(s) to install your project's dependencies
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt # For Python (assuming you have a requirements.txt)
+          # npm install # For Node.js (assuming you have a package.json)
 
       - name: Run tests
-        run: npm test
+        run: |
+          pytest # For Python
+          # npm test # For Node.js
