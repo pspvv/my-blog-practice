@@ -1,9 +1,9 @@
 [project]
 name = "my-blog-practice"
-version = "0.1.0"
+version = "0.1.1"
 description = "A simple Python library for demonstration"
 authors = [
-    { name="pspvv", email="pspvv@gmail.com" }
+    { name="pspvv", email="pspvvsandeep@gmail.com" }
 ]
 dependencies = [
     "requests",
